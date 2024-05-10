@@ -3,5 +3,6 @@ function imprimir(){
     console.log("feliz viernes");
     console.log("gracias Angely");
     console.log(" Hola soy Jelber");
+    console.log("practica git");
 }
 imprimir();
