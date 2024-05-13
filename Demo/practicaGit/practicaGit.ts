@@ -6,5 +6,6 @@ function imprimir(){
     console.log(" Hola soy Jelber");
     console.log("practica git");
     console.log("feliz fds");
+    console.log("feliz semana");
 }
 imprimir();
