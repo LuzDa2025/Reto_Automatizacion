@@ -7,5 +7,6 @@ function imprimir(){
     console.log("practica git");
     console.log("feliz fds");
     console.log("feliz semana");
+    console.log("Hola Practica");
 }
 imprimir();
