@@ -8,5 +8,6 @@ function imprimir(){
     console.log("feliz fds");
     console.log("feliz semana");
     console.log("Hola Practica");
+    console.log("Hola");
 }
 imprimir();
