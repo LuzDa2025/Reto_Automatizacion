@@ -9,5 +9,6 @@ function imprimir(){
     console.log("feliz semana");
     console.log("Hola Practica");
     console.log("Hola");
+    console.log("Buena tarde");
 }
 imprimir();
