@@ -9,7 +9,10 @@ Feature: Realizar el proceso de contratacion de un candidato en OrangeHRM
   @RecruitmentCandForm
     Scenario: Diligenciar datos de la vacante
       Given que estoy en la opcion "Candidates"
-      When requiero seleccionar el titulo profesional
-      And selecciono de la lista la opcion "Financial Analyst"
-      When requiero seleccionar la vacante
-      And selecciono de la lista la opcion "Junior Account Assistant"
+      #When requiero seleccionar el titulo profesional
+      #And selecciono de la lista la opcion "Financial Analyst"
+      #When requiero seleccionar la vacante
+      #And selecciono de la lista la opcion "Junior Account Assistant"
+      When requiero ingresar el nombre del candidato
+      And digito nombre "Joshua  Malfoy"
+      Then hago clic en el boton "Add"

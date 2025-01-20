@@ -38,23 +38,35 @@ export class RecruitmentCandSteps {
         await ((await this.RecruitmentPage)).bntRecruitment();
     }
     
-    @When(/^requiero seleccionar el titulo profesional$/)
-    async listaJobTitle() {
-        await ((await this.RecruitmentCandPage)).clickFinancialAnalyst();
-            }
+    //@When(/^requiero seleccionar el titulo profesional$/)
+    //async listaJobTitle() {
+        //await ((await this.RecruitmentCandPage)).clickFinancialAnalyst();
+    //}
     
-    @Then(/^selecciono de la lista la opcion "Financial Analyst"$/)
-    async selectJobTitle() {
-        await ((await this.RecruitmentCandPage)).selectFinancialAnalyst();
-    }
+    //@Then(/^selecciono de la lista la opcion "Financial Analyst"$/)
+    //async selectJobTitle() {
+        //await ((await this.RecruitmentCandPage)).selectFinancialAnalyst();
+    //}
 
-    @When(/^requiero seleccionar la vacante$/)
-    async listaVacancy() {
-        await ((await this.RecruitmentCandPage)).clickJuniorAccount();
-            }
+    //@When(/^requiero seleccionar la vacante$/)
+    //async listaVacancy() {
+        //await ((await this.RecruitmentCandPage)).clickJuniorAccount();
+    //}
     
-    @Then(/^selecciono de la lista la opcion "Junior Account Assistant"$/)
-    async selectVacancy() {
-        await ((await this.RecruitmentCandPage)).selectJuniorAccount();
+    //@Then(/^selecciono de la lista la opcion "Junior Account Assistant"$/)
+    //async selectVacancy() {
+        //await ((await this.RecruitmentCandPage)).selectJuniorAccount();
+    //}
+    @When(/^requiero ingresar el nombre del candidato$/)
+    async Candidate() {
+        await ((await this.RecruitmentCandPage)).CandidateName();
+    }
+    @When(/^digito nombre "Joshua  Malfoy"$/)
+    async Name() {
+        await ((await this.RecruitmentCandPage)).selectCandidateName();
+    }
+        @Then(/^hago clic en el boton "Add"$/)
+    async Add() {
+        await ((await this.RecruitmentCandPage)).bntAdd();
     }
 }
