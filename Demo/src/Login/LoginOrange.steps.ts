@@ -1,9 +1,9 @@
 import { Given, Then, When, World } from "@testing/cucumber-runner";
 import { pageProvider } from "@testing/wdio-page-objects";
-import { LoginOrangehrmPage } from "./LoginOrange.page";
-import { globalPage } from "./PosicinnGlobal.page";
+import { loginOrangehrmPage } from "./LoginOrange.page";
+import { globalPage } from "./PosicionGlobal.page";
 
-export class LoginOrangeSteps {
+export class loginOrangeSteps {
 
     world: World;
 
@@ -11,8 +11,8 @@ export class LoginOrangeSteps {
         this.world = world;
     }
 
-    get LoginOrangehrmPage() {
-        return pageProvider.wait(LoginOrangehrmPage);
+    get loginOrangehrmPage() {
+        return pageProvider.wait(loginOrangehrmPage);
     }
     get globalPage() {
         return pageProvider.wait(globalPage);
@@ -22,20 +22,20 @@ export class LoginOrangeSteps {
         return user;
     }
 
-    @Given(/^que estoy en la página de inicio de sesión$/)
+    @Given(/^que estoy en la pagina de inicio de sesion$/)
     async sesion() {
-        await pageProvider.go(LoginOrangehrmPage); //
+        await pageProvider.go(loginOrangehrmPage);
     }
-    @When(/^ingreso mi nombre de usuario y mi contraseña$/)
+    @When(/^ingreso nombre de usuario y contraseña$/)
     async credenciales() {
-        await ((await this.LoginOrangehrmPage)).Login();  
+        await ((await this.loginOrangehrmPage)).Login();  
     }
-    @When(/^hago clic en el botón "Login"$/)
+    @When(/^hago clic en el boton "Login"$/)
     async botonLogin() {
-        await ((await this.LoginOrangehrmPage)).bntLogin();
+        await ((await this.loginOrangehrmPage)).bntLogin();
     }
-    @Then(/^debería ser redirigido a la página principal$/)
-    async posiciónGlobal() {
+    @Then(/^soy redirigida a la pagina principal del aplicativo$/)
+    async posicionGlobal() {
         await ((await this.globalPage)).validPosicionGlobal();
     }
 

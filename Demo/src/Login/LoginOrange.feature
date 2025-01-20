@@ -1,10 +1,9 @@
 @Login
 
-Feature: Inicio de Sesión en una Aplicación
+Feature: Inicio de sesion en aplicacion OrangeHRM
 
-  Scenario: Inicio de Sesión Exitoso
-    #Given I'm a user with tags "orange" [framework]
-    Given que estoy en la página de inicio de sesión
-    When ingreso mi nombre de usuario y mi contraseña
-    And hago clic en el botón "Login"
-    Then debería ser redirigido a la página principal
+  Scenario: Inicio exitoso de sesion en OrangeHRM
+    Given que estoy en la pagina de inicio de sesion
+    When ingreso nombre de usuario y contraseña
+    And hago clic en el boton "Login"
+    Then soy redirigida a la pagina principal del aplicativo
